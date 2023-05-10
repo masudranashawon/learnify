@@ -9,3 +9,16 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Course {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  cover String
+  title String
+  instructor String
+  duration String
+  rating Float
+  description String
+  price Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
