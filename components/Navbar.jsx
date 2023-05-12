@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./Button";
 
 const Navbar = () => {
   return (
@@ -24,9 +25,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <Link href='/login' className='hover:text-white transition-colors'>
-            Sign in
-          </Link>
+          <Button href='/login' placeholder='Sign in' />
         </div>
       </div>
     </nav>
