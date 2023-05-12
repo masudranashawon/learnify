@@ -43,12 +43,17 @@ const CoursesItem = ({ course }) => {
         </p>
         <p className=''>{course.description.substring(0, 100)}...</p>
 
-        <div className='flex justify-between item-center'>
+        <div className='flex justify-between items-center'>
           <p className='text-lg font-semibold'>
             {currencyConverter(course.price)}
           </p>
 
-          <Button href={`/courses/${course.id}`} placeholder='View details' />
+          <Button
+            href={`/courses/${course.id}`}
+            placeholder='View details'
+            color='primary'
+            size='default'
+          />
         </div>
       </div>
     </div>
