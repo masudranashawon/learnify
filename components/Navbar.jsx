@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <div>
           <Button
-            href='/login'
+            href='/users/login'
             placeholder='Sign in'
             color='secondary'
             size='default'
