@@ -37,7 +37,7 @@ const CoursesItem = ({ course }) => {
             <span className='text-black font-semibold'>{course.students}</span>
           </span>
           <span className='flex items-center gap-1 text-black font-semibold'>
-            <AiOutlineStar c />
+            <AiOutlineStar />
             {course.rating}
           </span>
         </p>
