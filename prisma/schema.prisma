@@ -21,5 +21,30 @@ model Course {
   price Float
   students Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  email String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orders Order[]
+}
+
+model Order{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  transactionId String
+  amountTotal Float
+  name String
+  mobile String
+  address String
+  courseTitle String
+  courseId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id])
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "entity": [
+      {
+        "generate": "^0.0.1",
+        "hash": "^1.0.9"
+      },
+      {
+        "localhost": "true",
+        "port": "3000",
+        "n-Nport": "auto-generated",
+        "secret": "false"
+      },
+      {
+        "drop": "webhook-js/http://localhost:3000/api/webhook",
+        "permission": "rollback",
+        "gateway": "null"
+      }
+    ]
+  },
+  {
+    "proposed": [
+      {
+        "strategy": "jwt",
+        "version": "^9.0.0"
+      }
+    ]
+  },
+  {
+    "props": "entity::webhook-js/http://localhost:3000/api/webhook::encrypt"
+  }
+]
