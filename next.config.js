@@ -8,6 +8,7 @@ const nextConfig = {
       "plus.unsplash.com",
       "images.unsplash.com",
       "lh3.googleusercontent.com",
+      "dreamslms-wp.dreamguystech.com",
     ],
   },
 };

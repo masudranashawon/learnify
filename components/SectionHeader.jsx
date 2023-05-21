@@ -1,5 +1,3 @@
-import React from "react";
-
 const SectionHeader = ({ subHeading, heading, pera }) => {
   return (
     <div className='flex flex-col items-center text-center gap-1'>
