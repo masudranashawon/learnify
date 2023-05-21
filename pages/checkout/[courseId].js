@@ -110,7 +110,7 @@ const Checkout = ({ course }) => {
                 className='outline-none border py-3 px-4 rounded-lg focus:border-gray-700 duration-300'
                 type='tel'
                 id='mobile'
-                placeholder='+8801xxxxxxxx'
+                placeholder='+8801XXXXXXXXX'
                 value={formData.mobile}
                 onChange={(e) =>
                   setFormData({ ...formData, mobile: e.target.value })
