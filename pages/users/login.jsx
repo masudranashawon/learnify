@@ -3,15 +3,29 @@ import { useRouter } from "next/router";
 import { signIn, getSession } from "next-auth/react";
 import SectionHeader from "@/components/SectionHeader";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const LoginPage = ({ session }) => {
   const router = useRouter();
 
   const loginWithGoogle = async () => {
     try {
+      // await signIn("google");
       await signIn("google");
+
+      //set item for showing login success toast
+      localStorage.setItem("isLogInToastShown", "true");
     } catch (err) {
-      console.log(err.message);
+      toast.error(err.message, {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
 

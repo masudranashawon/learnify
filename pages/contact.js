@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import emailjs from "@emailjs/browser";
 import { IoMdSend } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const ContactPage = () => {
   const formRef = useRef(null);
@@ -20,10 +21,28 @@ const ContactPage = () => {
       )
       .then(
         () => {
-          console.log("Message sent successfully!");
+          toast.success("Message sent successfully!", {
+            position: "bottom-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
         },
         () => {
-          console.log("Failed to send message. Please try again.");
+          toast.error("Oops!Message send failed.", {
+            position: "bottom-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
         }
       );
 

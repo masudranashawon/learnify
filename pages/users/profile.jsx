@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { FiLogOut } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const ProfilePage = ({ session }) => {
   const router = useRouter();
@@ -10,12 +11,53 @@ const ProfilePage = ({ session }) => {
   const logoutWithGoogle = async () => {
     try {
       await signOut("google");
+
+      toast.info("Logged out!", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } catch (err) {
-      console.log(err.message);
+      toast.warn(err.message, {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 
   useEffect(() => {
+    //get toast showing status
+    const isLogInToastShown = localStorage.getItem("isLogInToastShown");
+
+    //showing toast for sign in success
+    if (isLogInToastShown) {
+      toast.success("Login Successful", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+
+      //remove item for one time toast per sign in
+      localStorage.removeItem("isLogInToastShown");
+    }
+
+    //if user not signed in
     if (!session) {
       router.replace("/users/login");
     }
