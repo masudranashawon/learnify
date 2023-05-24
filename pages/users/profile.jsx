@@ -68,26 +68,54 @@ const ProfilePage = ({ session }) => {
   }
 
   return (
-    <div className='wrapper py-10 min-h-screen flex flex-col items-center'>
-      <Image
-        src={session.user.image}
-        alt='session.user.name'
-        width={50}
-        height={50}
-        className='h-20 w-20 rounded-full border-2 border-black'
-      />
+    <div className='profile wrapper py-10 min-h-screen flex flex-col items-center'>
+      {session.user.email && (
+        <div className='profile-card flex flex-col gap-3 items-center mt-10 shadow-lg w-full lg:w-2/3 p-10 mx-auto rounded-lg'>
+          <div className='display-picture w-20 h-20 rounded-full border-2 flex border-gray-700 relative p-[6px] shadow-lg'>
+            <Image
+              src={session.user.image}
+              alt={session.user.name}
+              width={50}
+              height={50}
+              className='w-full object-cover border border-gray-300 rounded-full'
+              priority
+            />
 
-      <h2 className='text-3xl mt-2'>Welcome, {session.user.name}</h2>
+            <span className='w-6 h-6 absolute top-0 -right-2 rounded-full'>
+              <Image
+                src='https://res.cloudinary.com/drgxflcsb/image/upload/v1684943793/learnify/verified-icon_i92d0c.png'
+                alt='varified icon'
+                width={20}
+                height={20}
+                className='w-full object-cover'
+                title='Verified account'
+              />
+            </span>
+          </div>
 
-      <button
-        onClick={logoutWithGoogle}
-        className='flex gap-2 items-center bg-black text-white py-3 px-6 rounded-lg mt-5 hover:bg-gray-700 duration-300'
-      >
-        <span>
-          <FiLogOut />
-        </span>
-        Logout
-      </button>
+          <h2 className='text-lg md:text-2xl lg:text-3xl text-gray-700 mt-2'>
+            Welcome,{" "}
+            <span className='text-black font-semibold'>
+              {session.user.name}
+            </span>
+          </h2>
+
+          <p className='text-[12px] md:text-xl lg:text-xl text-gray-700'>
+            Logged Account:{" "}
+            <span className='text-black'>{session.user.email}</span>
+          </p>
+
+          <button
+            onClick={logoutWithGoogle}
+            className='flex gap-2 items-center bg-black text-white py-3 px-6 rounded-lg mt-5 hover:bg-gray-700 duration-300'
+          >
+            <span>
+              <FiLogOut />
+            </span>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
