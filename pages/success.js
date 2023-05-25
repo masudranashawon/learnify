@@ -27,7 +27,7 @@ const SuccessPage = ({ session }) => {
           Congratulations! You're Enrolled and on your way to success!
         </h2>
 
-        <Button href={"/orders"} placeholder={"Go to your orders"} />
+        <Button href='/orders' placeholder='Go to your orders' />
       </div>
     </div>
   );
