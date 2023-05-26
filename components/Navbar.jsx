@@ -8,9 +8,11 @@ const Navbar = () => {
   return (
     <nav className='navbar bg-black text-gray-400 h-20 flex items-center'>
       <div className='wrapper flex justify-between items-center'>
-        <Link href='/' className='text-white font-semibold'>
-          Learnify
-        </Link>
+        <div className='logo'>
+          <Link href='/' className='text-white font-semibold'>
+            Learnify
+          </Link>
+        </div>
 
         <div className='flex gap-5'>
           <Link href='/' className='hover:text-white transition-colors'>

@@ -30,12 +30,12 @@ const CourseDetails = ({ course }) => {
             {course.instructor}
           </p>
           <p>
-            <span className='font-semibold'>Course Description:</span>{" "}
-            {course.description}
-          </p>
-          <p>
             <span className='font-semibold'>Entrolled Students:</span>{" "}
             {course.students}
+          </p>
+          <p>
+            <span className='font-semibold'>Course Description:</span>{" "}
+            {course.description}
           </p>
         </div>
 
