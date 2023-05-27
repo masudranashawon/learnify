@@ -1,40 +1,80 @@
 import Link from "next/link";
-import Button from "./Button";
 import { useSession } from "next-auth/react";
+import { useCallback, useState } from "react";
+import Button from "@/components/Button";
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const { data: session } = useSession();
 
+  const [toggleOpen, setToggleOpen] = useState(false);
+
+  const handleToggle = useCallback(() => {
+    if (window.innerWidth > 1023) {
+      return;
+    }
+
+    setToggleOpen(!toggleOpen);
+    document.body.classList.toggle("overflow-hidden");
+  }, [toggleOpen]);
+
   return (
-    <nav className='navbar bg-black text-gray-400 h-20 flex items-center'>
+    <header className='navbar w-full bg-black text-gray-400 h-20 flex items-center'>
       <div className='wrapper flex justify-between items-center'>
         <div className='logo'>
-          <Link href='/' className='text-white font-semibold'>
+          <Link href='/' className='text-white font-semibold text-xl'>
             Learnify
           </Link>
         </div>
 
-        <div className='flex gap-5'>
-          <Link href='/' className='hover:text-white transition-colors'>
-            Home
-          </Link>
-          <Link href='/courses' className='hover:text-white transition-colors'>
-            Courses
-          </Link>
-          {session && (
-            <Link href='/orders' className='hover:text-white transition-colors'>
-              Orders
-            </Link>
-          )}
-          <Link href='/about' className='hover:text-white transition-colors'>
-            About
-          </Link>
-          <Link href='/contact' className='hover:text-white transition-colors'>
-            Contact
-          </Link>
-        </div>
+        <nav className='nav-links' onClick={handleToggle}>
+          <ul
+            className={`${toggleOpen ? "mobile-nav" : "hidden lg:flex gap-5"}`}
+          >
+            <li>
+              <Link href='/' className='hover:text-white transition-colors'>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='/courses'
+                className='hover:text-white transition-colors'
+              >
+                Courses
+              </Link>
+            </li>
+            {session && (
+              <li>
+                <Link
+                  href='/orders'
+                  className='hover:text-white transition-colors'
+                >
+                  Orders
+                </Link>
+              </li>
+            )}
+            <li>
+              <Link
+                href='/about'
+                className='hover:text-white transition-colors'
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='/contact'
+                className='hover:text-white transition-colors'
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-        <div>
+        <div className='flex gap-5 items-center'>
           {!session ? (
             <Button
               href='/users/login'
@@ -50,9 +90,24 @@ const Navbar = () => {
               size='default'
             />
           )}
+
+          <span className='z-20'>
+            <FiMenu
+              onClick={handleToggle}
+              className={`${
+                !toggleOpen ? "block" : "hidden"
+              } text-2xl lg:hidden`}
+            />
+            <AiOutlineClose
+              onClick={handleToggle}
+              className={`${
+                toggleOpen ? "block" : "hidden"
+              } text-2xl lg:hidden`}
+            />
+          </span>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

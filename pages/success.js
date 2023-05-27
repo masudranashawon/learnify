@@ -18,15 +18,21 @@ const SuccessPage = ({ session }) => {
   }
 
   return (
-    <div className='success wrapper py-10 min-h-screen'>
-      <div className='flex flex-col items-center gap-5'>
-        <h2 className='text-sm md:text-xl lg:text-3xl flex items-center gap-2'>
+    <div className='success wrapper py-10 min-h-screen flex justify-center'>
+      <div className='text-center w-full lg:w-[50rem] flex flex-col items-center space-y-2'>
+        <div className='flex justify-center items-center gap-2 text-2xl lg:text-3xl'>
           <span className='text-emerald-500'>
             <AiOutlineCheckCircle />
           </span>
-          Congratulations! You're Enrolled and on your way to success!
-        </h2>
-
+          <h2 className='font-medium'>
+            Congratulations! You've successfully enrolled.
+          </h2>
+        </div>
+        <p className='text-lg text-center text-gray-500'>
+          Thank you for choosing to enhance your skills and knowledge with our
+          course. We are excited to have you as a student, and we can't wait to
+          embark on this educational journey together.
+        </p>
         <Button href='/orders' placeholder='Go to your orders' />
       </div>
     </div>
