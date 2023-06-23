@@ -25,13 +25,13 @@ const SuccessPage = ({ session }) => {
             <AiOutlineCheckCircle />
           </span>
           <h2 className='font-medium'>
-            Congratulations! You've successfully enrolled.
+            {"Congratulations! You've successfully enrolled."}
           </h2>
         </div>
         <p className='text-lg text-center text-gray-500'>
-          Thank you for choosing to enhance your skills and knowledge with our
+          {`Thank you for choosing to enhance your skills and knowledge with our
           course. We are excited to have you as a student, and we can't wait to
-          embark on this educational journey together.
+          embark on this educational journey together.`}
         </p>
         <Button href='/orders' placeholder='Go to your orders' />
       </div>

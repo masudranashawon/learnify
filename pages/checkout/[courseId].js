@@ -5,6 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { FiCheckCircle } from "react-icons/fi";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 /* STRIPE PROMISE*/
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
@@ -28,6 +29,26 @@ const Checkout = ({ course }) => {
         name: session.user.name,
         email: session.user.email,
       }));
+    }
+
+    //get toast showing status
+    const isLogInToastShown = localStorage.getItem("isLogInToastShown");
+
+    //showing toast for sign in success
+    if (isLogInToastShown) {
+      toast.success("Login Successful", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+
+      //remove item for one time toast per sign in
+      localStorage.removeItem("isLogInToastShown");
     }
   }, [session]);
 

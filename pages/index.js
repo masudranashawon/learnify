@@ -1,9 +1,11 @@
 import { getAllCourses } from "@/prisma/courses";
 import CoursesPage from "./courses";
+import Hero from "@/components/Hero";
 
 const HomePage = ({ courses }) => {
   return (
     <div>
+      <Hero />
       <CoursesPage courses={courses} />
     </div>
   );

@@ -81,7 +81,7 @@ const ProfilePage = ({ session }) => {
               priority
             />
 
-            <span className='w-6 h-6 absolute top-0 -right-2 rounded-full'>
+            <span className='w-6 h-6 absolute top-0 -right-2 rounded-full text-sky-500'>
               <Image
                 src='https://res.cloudinary.com/drgxflcsb/image/upload/v1684943793/learnify/verified-icon_i92d0c.png'
                 alt='varified icon'

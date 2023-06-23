@@ -69,6 +69,7 @@ const ContactPage = () => {
             alt='Some man are connected on call in call center'
             width={500}
             height={500}
+            priority
           />
         </div>
 

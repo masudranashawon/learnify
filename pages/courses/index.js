@@ -1,10 +1,36 @@
 import CoursesItem from "@/components/CoursesItem";
 import SectionHeader from "@/components/SectionHeader";
 import { getAllCourses } from "@/prisma/courses";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 const CoursesPage = ({ courses }) => {
+  let isLogInToastShown;
+
+  useEffect(() => {
+    //get toast showing status
+    let isLogInToastShown = localStorage.getItem("isLogInToastShown");
+
+    //showing toast for sign in success\
+    if (isLogInToastShown) {
+      toast.success("Login Successful", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+
+      //remove item for one time toast per sign in
+      localStorage.removeItem("isLogInToastShown");
+    }
+  }, [isLogInToastShown]);
+
   return (
-    <div className='wrapper py-10'>
+    <div className='courses wrapper py-10'>
       <SectionHeader
         subHeading='Courses'
         heading='Explore the World of Online Learning'

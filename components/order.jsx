@@ -31,7 +31,7 @@ const Order = ({ course, i }) => {
     };
 
     getCourse();
-  }, []);
+  }, [course.courseId]);
 
   if (orderCourse.cover && course) {
     return (
