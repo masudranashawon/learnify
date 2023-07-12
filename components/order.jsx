@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 const Order = ({ course, i }) => {
   const [orderCourse, setOrderCourse] = useState({});
-
+  console.log(orderCourse);
   useEffect(() => {
     const getCourse = async () => {
       try {

@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const CoursesItem = ({ course }) => {
   return (
-    <div className='course-card w-full  lg:w-[30rem] shadow-md rounded-md overflow-hidden'>
+    <div className='course-card w-full lg:w-[30rem] shadow-md rounded-md overflow-hidden'>
       <div className='course-image w-full h-[25rem] lg:h-[20rem] overflow-hidden'>
         <Image
           src={course.cover}
@@ -41,7 +41,7 @@ const CoursesItem = ({ course }) => {
             {course.rating}
           </span>
         </p>
-        <p className=''>{course.description.substring(0, 100)}...</p>
+        <p>{course.description.substring(0, 100)}...</p>
 
         <div className='flex justify-between items-center'>
           <p className='text-lg font-semibold'>

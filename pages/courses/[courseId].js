@@ -12,9 +12,6 @@ const CourseDetails = ({ course }) => {
       router.push(`/checkout/${course.id}`);
     } else {
       router.push(`/users/login?destination=/checkout/${course.id}`);
-
-      //set item for showing login success toast
-      localStorage.setItem("isLogInToastShown", true);
     }
   };
 

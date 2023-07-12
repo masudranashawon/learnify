@@ -3,7 +3,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 const AboutPage = () => {
   return (
-    <div className='about wrapper py-10'>
+    <div className='about wrapper py-10 2xl:w-[calc(100vw-6rem)]'>
       <SectionHeader
         subHeading='About'
         heading='Empowering Learning Through Online Courses'
@@ -21,10 +21,10 @@ const AboutPage = () => {
           </p>
           <p className='text-lg'>
             Our team of expert instructors curates and designs courses that are
-            not only informative but also engaging and practical. Whether you're
-            a beginner or an advanced learner, our diverse range of courses
-            caters to different interests and learning styles, ensuring there's
-            something for everyone.
+            not only informative but also engaging and practical. Whether
+            you&apos;re a beginner or an advanced learner, our diverse range of
+            courses caters to different interests and learning styles, ensuring
+            there&apos;s something for everyone.
           </p>
           <p className='text-lg'>
             We believe in the transformative power of education. Through

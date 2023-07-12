@@ -31,10 +31,10 @@ const Checkout = ({ course }) => {
       }));
     }
 
-    //get toast showing status
+    //GET TOAST SHOWING STATUS
     const isLogInToastShown = localStorage.getItem("isLogInToastShown");
 
-    //showing toast for sign in success
+    //SHOWING TOAST FOR SIGNIN SUCCESS
     if (isLogInToastShown) {
       toast.success("Login Successful", {
         position: "bottom-left",
@@ -47,7 +47,7 @@ const Checkout = ({ course }) => {
         theme: "colored",
       });
 
-      //remove item for one time toast per sign in
+      //REMOVE ITEM FOR ONE TIME TOAST PER SIGN IN
       localStorage.removeItem("isLogInToastShown");
     }
   }, [session]);
@@ -74,8 +74,18 @@ const Checkout = ({ course }) => {
       sessionId: checkoutSession.data.id,
     });
 
+    // IF PAYMENT FAILED
     if (result.error) {
-      console.log(result.error.message);
+      toast.error(result.error.message, {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
 
