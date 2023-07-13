@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import TestimonialSlide from "./TestimonialSlide";
+import clsx from "clsx";
 
 const TestimonialSlider = ({ testimonials }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,10 +40,10 @@ const TestimonialSlider = ({ testimonials }) => {
         <span className='font-semibold text-gray-500 tracking-wider'>
           Testimonial
         </span>
-        <h2 className='text-2xl md:text-3xl lg:text-3xl xl:leading-[3.5rem] xl:text-[2.5rem] 2xl:text-5xl text-gray-900 font-bold'>
+        <h2 className='text-2xl md:text-4xl lg:text-3xl xl:leading-[3.5rem] xl:text-[2.5rem] 2xl:text-5xl text-gray-900 font-bold'>
           Inspiring Testimonials from Our Satisfied Students
         </h2>
-        <p className='text-gray-700 text-[1.2rem] tracking-wide'>
+        <p className='text-gray-700 text-[1.2rem] md:text-[1.5rem] tracking-wide'>
           Unlock Your Potential: Hear Inspiring Testimonials from Our Students
           and Experience the Life-Changing Power of Our Courses.
         </p>
@@ -63,10 +64,10 @@ const TestimonialSlider = ({ testimonials }) => {
       </div>
 
       {/* RIGHT SIDE FOR SLIDER CONTENT */}
-      <div className='col-span-5 lg:col-span-3 relative w-full h-[30rem] mx-auto overflow-hidden'>
+      <div className='col-span-5 lg:col-span-3 relative w-full lg:h-[30rem] h-auto mx-auto overflow-hidden'>
         {/* MAIN SLIDER */}
         <div
-          className='desktop-slider hidden lg:flex justify-center items-center duration-[1.5s] w-[500vw] h-[25rem] overflow-hidden'
+          className='flex justify-center items-center duration-[1.5s] w-[500vw] h-auto lg:h-[25rem] overflow-hidden'
           style={{
             transform: `translateX(-${100 * currentSlide}vw)`,
           }}
@@ -82,13 +83,15 @@ const TestimonialSlider = ({ testimonials }) => {
         </div>
 
         {/* SLIDER LOWER CONTROLLER */}
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center lg:mb-0 lg:mt-10 md:mb-10'>
           {testimonials.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 mx-2 rounded-full hover:bg-gray-400 duration-300 ${
-                index === currentSlide ? "bg-gray-700" : "bg-gray-300"
-              }`}
+              className={clsx(
+                `w-3 h-3 mx-2 rounded-full hover:bg-gray-400 duration-300 ${
+                  index === currentSlide ? "bg-gray-700" : "bg-gray-300"
+                }`
+              )}
               onClick={() => setCurrentSlide(index)}
             />
           ))}
