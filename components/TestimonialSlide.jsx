@@ -8,7 +8,7 @@ const TestimonialSlide = ({ testimonial, index, currentSlide }) => {
   return (
     <div
       className={clsx(
-        `slide w-full lg:w-1/5 flex items-center content-center ${
+        `slide w-screen lg:w-1/5 flex items-center mx-auto content-center ${
           currentSlide === index ? "opacity-100" : "opacity-0"
         } duration-1000 delay-500 p-2 lg:p-5`
       )}
@@ -55,33 +55,33 @@ const TestimonialSlide = ({ testimonial, index, currentSlide }) => {
       </div>
 
       {/* MOBILE VERSION SLIDE */}
-      <div className='mobile-slide lg:hidden w-full p-10 mt-24'>
-        <div className='w-[95%] mobile-slider-wrapper shadow-xl rounded-xl p-10 relative'>
+      <div className='mobile-slide lg:hidden w-full md:p-10 md:mt-24 mt-20'>
+        <div className='mobile-slider-wrapper w-[90%] sm:w-[90%] md:w-[95%] shadow-xl rounded-xl md:p-10 p-5 relative'>
           {/* SLIDER IMAGE SECTION*/}
-          <div className='w-40 h-40 overflow-hidden rounded-full shadow-xl absolute left-1/2 -top-1/2 -translate-x-1/2 translate-y-1/2'>
+          <div className='slider-image md:w-40 md:h-40 sm:w-32 sm:h-32 w-24 h-24 overflow-hidden rounded-full shadow-xl absolute left-1/2 md:-top-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-y-1/2'>
             <Image
               src={testimonial.displayPicture}
               alt={testimonial.alt}
-              width={50}
-              height={50}
+              width={500}
+              height={500}
               className='w-full h-full object-cover hover:scale-110 duration-[1.5s]'
               priority
             />
           </div>
 
           {/* QUOTAION */}
-          <span className='text-[8rem] text-gray-600 absolute left-0 top-0 -translate-y-1/2 block'>
+          <span className='md:text-[8rem] text-[3rem] text-gray-600 absolute left-0 top-0 -translate-y-1/2 block'>
             <BsQuote />
           </span>
 
           {/* SLIDER DETAILS SECTION */}
-          <div className='mt-14'>
+          <div className='mt-16 sm:mt-20'>
             {/* STUDENT NAME */}
-            <h3 className='font-bold text-4xl text-center'>
+            <h3 className='font-bold md:text-4xl text-2xl sm:text-3xl text-center'>
               {testimonial.studentName}
             </h3>
             {/* ROLE AND RATING */}
-            <p className='flex justify-between font-semibold text-gray-600 text-3xl my-5'>
+            <p className='flex justify-between font-semibold text-gray-600 md:text-3xl sm:text-[2.5xl] text-xl my-5'>
               <span className='role'>{testimonial.role}</span>
               <span className='flex items-center gap-1 text-black font-semibold'>
                 <AiOutlineStar />
@@ -90,7 +90,7 @@ const TestimonialSlide = ({ testimonial, index, currentSlide }) => {
             </p>
             {/* FEEDBACK */}
             <p className='text'>
-              <span className='leading-[1.6] text-[1.5rem] text-center block mt-5'>
+              <span className='md:leading-[1.6] sm:text-[1.4rem] text-[1.2rem] text-center block mt-5'>
                 {String(testimonial.feedback).substring(0, 210)}
               </span>
             </p>
