@@ -1,8 +1,8 @@
 import { getAllCourses } from "@/prisma/courses";
 import { getAllTestimonials } from "@/prisma/testimonials";
-import CoursesPage from "./courses";
 import Hero from "@/components/Hero";
-import TestimonialSlider from "@/components/TestimonialSlider";
+import CoursesPage from "./courses";
+import TestimonialSlider from "./testimonials";
 
 const HomePage = ({ courses, testimonials }) => {
   return (
