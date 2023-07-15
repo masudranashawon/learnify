@@ -3,7 +3,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 const AboutPage = () => {
   return (
-    <section className='about wrapper py-10 2xl:h-[calc(100vh-6rem)]'>
+    <section className='about wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         subHeading='About'
         heading='Empowering Learning Through Online Courses'

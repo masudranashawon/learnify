@@ -67,7 +67,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className='faqs wrapper py-10  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='faqs wrapper py-10 md:py-20  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         heading='Frequently Asked Questions'
         subHeading='FAQ'

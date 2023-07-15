@@ -19,7 +19,7 @@ const OrdersPage = ({ session, customer }) => {
   }
 
   return (
-    <section className='wrapper py-10 min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='wrapper py-10 md:py-20 min-h-screen 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         subHeading={"orders"}
         heading={`You have enrolled ${customer.orders.length} course${

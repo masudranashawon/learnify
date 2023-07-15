@@ -39,7 +39,7 @@ const LoginPage = ({ session }) => {
 
   if (!session) {
     return (
-      <section className='login wrapper py-10 min-h-screen'>
+      <section className='login wrapper py-10 md:py-20 min-h-screen'>
         <SectionHeader
           subHeading='Login'
           heading='Get started with Google'

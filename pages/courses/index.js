@@ -4,7 +4,7 @@ import { getAllCourses } from "@/prisma/courses";
 
 const CoursesPage = ({ courses }) => {
   return (
-    <section className='courses wrapper py-10'>
+    <section className='courses wrapper py-10 md:py-20'>
       <SectionHeader
         subHeading='Courses'
         heading='Explore the World of Online Learning'

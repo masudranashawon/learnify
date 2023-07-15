@@ -54,7 +54,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className='contact wrapper py-10 2xl:h-[calc(100vh-6rem)]'>
+    <section className='contact wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         subHeading='Contact'
         heading='Get in Touch'

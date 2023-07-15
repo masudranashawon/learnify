@@ -16,7 +16,7 @@ const CourseDetails = ({ course }) => {
   };
 
   return (
-    <section className='wrapper py-10 min-h-screen'>
+    <section className='wrapper py-10 md:py-20 min-h-screen'>
       <div
         style={{ backgroundImage: `url(${course.cover})` }}
         className='course-cover w-full h-[30rem] object-cover bg-no-repeat bg-cover bg-center'

@@ -4,7 +4,7 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <section className='hero wrapper py-10 sm:h-auto lg:min-h-screen lg:h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='hero wrapper py-10 md:py-20 sm:h-auto lg:min-h-screen lg:h-screen 2xl:h-[calc(100vh-6rem)]'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
         <div className='hero-left row-start-2 lg:row-start-auto'>
           <span className='font-semibold text-gray-500 tracking-wider'>

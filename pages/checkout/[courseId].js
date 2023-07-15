@@ -90,7 +90,7 @@ const Checkout = ({ course }) => {
   };
 
   return (
-    <section className='wrapper py-10 min-h-screen'>
+    <section className='wrapper py-10 md:py-20 min-h-screen'>
       <SectionHeader
         subHeading='Checkout'
         heading='Secure Checkout Process'
