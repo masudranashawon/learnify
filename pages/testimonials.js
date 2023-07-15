@@ -35,7 +35,7 @@ const TestimonialSlider = ({ testimonials }) => {
   };
 
   return (
-    <div className='testimonial-slider py-10  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='testimonial-slider py-10  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
       <div className='testimonial-wrapper wrapper gap-10 sm:gap-5 grid grid-cols-5 h-screen sm:h-auto items-center overflow-hidden'>
         {/* LEFT SIDE FOR SECTION CONTENT */}
         <div className='slider-left flex flex-col gap-5 justify-start items-start col-span-5 lg:col-span-2 lg:p-5'>
@@ -100,7 +100,7 @@ const TestimonialSlider = ({ testimonials }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

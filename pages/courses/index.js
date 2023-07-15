@@ -4,7 +4,7 @@ import { getAllCourses } from "@/prisma/courses";
 
 const CoursesPage = ({ courses }) => {
   return (
-    <div className='courses wrapper py-10'>
+    <section className='courses wrapper py-10'>
       <SectionHeader
         subHeading='Courses'
         heading='Explore the World of Online Learning'
@@ -18,7 +18,7 @@ const CoursesPage = ({ courses }) => {
           <CoursesItem key={course.id} course={course} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

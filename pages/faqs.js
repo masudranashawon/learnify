@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
-import clsx from "clsx";
 import SectionHeader from "@/components/SectionHeader";
 
 const FAQSection = () => {
@@ -68,7 +67,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className='faqs wrapper py-10  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='faqs wrapper py-10  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         heading='Frequently Asked Questions'
         subHeading='FAQ'
@@ -101,7 +100,7 @@ const FAQSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,11 +6,11 @@ import TestimonialSlider from "./testimonials";
 
 const HomePage = ({ courses, testimonials }) => {
   return (
-    <div>
+    <main>
       <Hero />
       <CoursesPage courses={courses} />
       <TestimonialSlider testimonials={testimonials} />
-    </div>
+    </main>
   );
 };
 

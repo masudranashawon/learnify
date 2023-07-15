@@ -18,7 +18,7 @@ const SuccessPage = ({ session }) => {
   }
 
   return (
-    <div className='success wrapper py-10 min-h-screen 2xl:h-[calc(100vh-6rem)] flex justify-center'>
+    <section className='success wrapper py-10 min-h-screen 2xl:h-[calc(100vh-6rem)] flex justify-center'>
       <div className='text-center w-full lg:w-[50rem] flex flex-col items-center space-y-2'>
         <div className='flex justify-center items-center gap-2 text-2xl lg:text-3xl'>
           <span className='text-emerald-500'>
@@ -35,7 +35,7 @@ const SuccessPage = ({ session }) => {
         </p>
         <Button href='/orders' placeholder='Go to your orders' />
       </div>
-    </div>
+    </section>
   );
 };
 

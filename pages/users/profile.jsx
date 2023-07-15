@@ -68,7 +68,7 @@ const ProfilePage = ({ session }) => {
   }
 
   return (
-    <div className='profile wrapper py-10 min-h-screen flex flex-col items-center'>
+    <section className='profile wrapper py-10 min-h-screen flex flex-col items-center'>
       {session.user.email && (
         <div className='profile-card flex flex-col gap-3 items-center mt-10 shadow-lg w-full lg:w-2/3 p-10 mx-auto rounded-lg'>
           <div className='display-picture w-20 h-20 rounded-full border-2 flex border-gray-700 relative p-[6px] shadow-lg'>
@@ -116,7 +116,7 @@ const ProfilePage = ({ session }) => {
           </button>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
