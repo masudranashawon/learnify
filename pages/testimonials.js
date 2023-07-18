@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import TestimonialSlide from "@/components/TestimonialSlide";
-import clsx from "clsx";
 import { getAllTestimonials } from "@/prisma/testimonials";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import clsx from "clsx";
+import TestimonialSlide from "@/components/TestimonialSlide";
+import MobileTabTestimonialSlide from "@/components/MobileTabTestimonialSlide";
 
 const TestimonialSlider = ({ testimonials }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,7 +37,7 @@ const TestimonialSlider = ({ testimonials }) => {
 
   return (
     <section className='testimonial-slider py-10 md:py-20  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
-      <div className='testimonial-wrapper wrapper gap-10 sm:gap-5 grid grid-cols-5 h-screen sm:h-auto items-center overflow-hidden'>
+      <div className='testimonial-wrapper wrapper lg:gap-10 gap-5 grid grid-cols-5 lg:h-screen h-auto items-center overflow-hidden'>
         {/* LEFT SIDE FOR SECTION CONTENT */}
         <div className='slider-left flex flex-col gap-5 justify-start items-start col-span-5 lg:col-span-2 lg:p-5'>
           <span className='font-semibold text-gray-500 tracking-wider'>
@@ -69,7 +70,7 @@ const TestimonialSlider = ({ testimonials }) => {
         <div className='slider-right col-span-5 lg:col-span-3 relative w-full lg:h-[30rem] h-auto overflow-hidden'>
           {/* MAIN SLIDER */}
           <div
-            className='slider-wrapper flex justify-center items-center duration-[1.5s] w-[500vw] h-[40rem] lg:h-[25rem] overflow-hidden sm:mb-0'
+            className='main-slider-wrapper hidden lg:flex justify-center items-center duration-[1.5s] w-[500vw] lg:h-[25rem] overflow-hidden'
             style={{
               transform: `translateX(-${100 * currentSlide}vw)`,
             }}
@@ -84,8 +85,15 @@ const TestimonialSlider = ({ testimonials }) => {
             ))}
           </div>
 
+          {/* MOBILE VERSION SLIDER */}
+          <div className='mobile-slider-wrapper lg:hidden flex justify-center items-center w-full overflow-hidden'>
+            <MobileTabTestimonialSlide
+              testimonial={testimonials[currentSlide]}
+            />
+          </div>
+
           {/* SLIDER LOWER CONTROLLER */}
-          <div className='flex justify-center lg:mb-0 lg:mt-10 md:mb-10 my-5'>
+          <div className='flex justify-center lg:mt-10'>
             {testimonials.map((_, index) => (
               <button
                 key={index}
