@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
-import SectionHeader from "@/components/SectionHeader";
 import { getAllFaqs } from "@/prisma/faqs";
+import SectionHeader from "@/components/SectionHeader";
 
 const FAQSection = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -22,6 +22,7 @@ const FAQSection = ({ faqs }) => {
         pera='Find answers to common questions about our courses and the purchasing process.'
       />
 
+      {/* FAQ's MAIN SECTION */}
       <div className='max-w-3xl mx-auto px-4 py-8'>
         {faqs.map((faq, index) => (
           <div key={index} className='mb-4'>

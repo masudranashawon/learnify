@@ -25,7 +25,9 @@ export default HomePage;
 
 export const getServerSideProps = async () => {
   const courses = await getAllCourses();
+
   const testimonials = await getAllTestimonials();
+
   const faqs = await getAllFaqs();
 
   const updatedCourses = courses.map((course) => ({

@@ -1,9 +1,9 @@
 import { useRef } from "react";
+import { IoMdSend } from "react-icons/io";
+import { toast } from "react-toastify";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import emailjs from "@emailjs/browser";
-import { IoMdSend } from "react-icons/io";
-import { toast } from "react-toastify";
 
 const ContactPage = () => {
   const formRef = useRef(null);

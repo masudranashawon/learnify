@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import Button from "@/components/Button";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import Button from "@/components/Button";
 
 const SuccessPage = ({ session }) => {
   const router = useRouter();
