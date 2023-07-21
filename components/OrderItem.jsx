@@ -12,7 +12,7 @@ const OrderItem = ({ course, i }) => {
     const getCourse = async () => {
       try {
         await axios
-          .get(`http://localhost:3000/api/courses/${course.courseId}`)
+          .get(`https://learnify.vercel.app/api/courses/${course.courseId}`)
           .then((res) => {
             setOrderCourse(res.data);
           });
