@@ -39,35 +39,56 @@ const TestimonialSlider = ({ testimonials }) => {
     <section className='testimonial-slider py-10 md:py-20  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
       <div className='testimonial-wrapper wrapper lg:gap-10 gap-5 grid grid-cols-5 lg:h-screen h-auto items-center overflow-hidden'>
         {/* LEFT SIDE FOR SECTION CONTENT */}
-        <div className='slider-left flex flex-col gap-5 justify-start items-start col-span-5 lg:col-span-2 lg:p-5'>
-          <span className='font-semibold text-gray-500 tracking-wider'>
-            Testimonial
-          </span>
-          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:leading-[3.5rem] xl:text-[2.5rem] 2xl:text-5xl text-gray-900 font-bold'>
-            Inspiring Testimonials from Our Satisfied Students
-          </h2>
-          <p className='text-gray-700 text-[1.2rem] sm:text-[1.5rem] md:text-[1.5rem] tracking-wide'>
-            Unlock Your Potential: Hear Inspiring Testimonials from Our Students
-            and Experience the Life-Changing Power of Our Courses.
-          </p>
-          <div className='mt-5 flex gap-5'>
-            <button
-              onClick={handlePrevSlide}
-              className='w-12 h-12 flex justify-center items-center rounded-full bg-gray-900 hover:bg-gray-700 text-white duration-300'
-            >
-              <FiChevronLeft size={35} color={"white"} className='text-white' />
-            </button>
-            <button
-              onClick={handleNextSlide}
-              className='w-12 h-12 flex justify-center items-center rounded-full bg-gray-900 hover:bg-gray-700 text-white duration-300'
-            >
-              <FiChevronRight size={35} />
-            </button>
+        <div className='slider-left flex flex-col gap-5 justify-start items-start col-span-5 lg:col-span-2 lg:p-5 overflow-hidden'>
+          <div
+            data-aos='flip-down'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            data-aos-delay='500'
+          >
+            <span className='font-semibold text-gray-500 tracking-wider'>
+              Testimonial
+            </span>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:leading-[3.5rem] xl:text-[2.5rem] 2xl:text-5xl text-gray-900 font-bold'>
+              Inspiring Testimonials from Our Satisfied Students
+            </h2>
+            <p className='text-gray-700 text-[1.2rem] sm:text-[1.5rem] md:text-[1.5rem] tracking-wide'>
+              Unlock Your Potential: Hear Inspiring Testimonials from Our
+              Students and Experience the Life-Changing Power of Our Courses.
+            </p>
+            <div className='mt-5 flex gap-5'>
+              <button
+                onClick={handlePrevSlide}
+                className='w-12 h-12 flex justify-center items-center rounded-full bg-gray-900 hover:bg-gray-700 text-white duration-300'
+              >
+                <FiChevronLeft
+                  size={35}
+                  color={"white"}
+                  className='text-white'
+                />
+              </button>
+              <button
+                onClick={handleNextSlide}
+                className='w-12 h-12 flex justify-center items-center rounded-full bg-gray-900 hover:bg-gray-700 text-white duration-300'
+              >
+                <FiChevronRight size={35} />
+              </button>
+            </div>
           </div>
         </div>
 
         {/* RIGHT SIDE FOR SLIDER CONTENT */}
-        <div className='slider-right col-span-5 lg:col-span-3 relative w-full lg:h-[30rem] h-auto overflow-hidden'>
+        <div
+          data-aos='flip-left'
+          data-aos-delay='1000'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          data-aos-mirror='true'
+          data-aos-once='false'
+          className='slider-right col-span-5 lg:col-span-3 relative w-full lg:h-[30rem] h-auto overflow-hidden'
+        >
           {/* MAIN SLIDER */}
           <div
             className='main-slider-wrapper hidden lg:flex justify-center items-center duration-[1.5s] w-[500vw] lg:h-[25rem] overflow-hidden'
