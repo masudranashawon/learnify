@@ -48,6 +48,10 @@ const LoginPage = ({ session }) => {
 
         <div className='flex justify-center mt-10'>
           <button
+            data-aos='zoom-in'
+            data-aos-duration='1000'
+            data-aos-delay='1500'
+            data-aos-easing='ease-in-out'
             className='flex gap-2 items-center bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-700 duration-300'
             onClick={loginWithGoogle}
           >

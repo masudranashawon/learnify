@@ -70,7 +70,12 @@ const ProfilePage = ({ session }) => {
   return (
     <section className='profile wrapper py-10 md:py-20 min-h-screen flex flex-col items-center'>
       {session.user.email && (
-        <div className='profile-card flex flex-col gap-3 items-center mt-10 shadow-lg w-full lg:w-2/3 p-10 mx-auto rounded-lg'>
+        <div
+          data-aos='zoom-out-down'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          className='profile-card flex flex-col gap-3 items-center mt-10 shadow-lg w-full lg:w-2/3 p-10 mx-auto rounded-lg'
+        >
           <div className='display-picture w-20 h-20 rounded-full border-2 flex border-gray-700 relative p-[6px] shadow-lg'>
             <Image
               src={session.user.image}
