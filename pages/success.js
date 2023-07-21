@@ -20,7 +20,12 @@ const SuccessPage = ({ session }) => {
   return (
     <section className='success wrapper py-10 md:py-20 min-h-screen 2xl:h-[calc(100vh-6rem)] flex justify-center'>
       <div className='text-center w-full lg:w-[50rem] flex flex-col items-center space-y-2'>
-        <div className='flex justify-center items-center gap-2 text-2xl lg:text-3xl'>
+        <div
+          data-aos='fade-down'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          className='flex justify-center items-center gap-2 text-2xl lg:text-3xl'
+        >
           <span className='text-emerald-500'>
             <AiOutlineCheckCircle />
           </span>
@@ -28,12 +33,25 @@ const SuccessPage = ({ session }) => {
             {"Congratulations! You've successfully enrolled."}
           </h2>
         </div>
-        <p className='text-lg text-center text-gray-500'>
+        <p
+          data-aos='fade-down'
+          data-aos-delay='1000'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          className='text-lg text-center text-gray-500'
+        >
           {`Thank you for choosing to enhance your skills and knowledge with our
           course. We are excited to have you as a student, and we can't wait to
           embark on this educational journey together.`}
         </p>
-        <Button href='/orders' placeholder='Go to your orders' />
+        <div
+          data-aos='zoom-in'
+          data-aos-delay='1500'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+        >
+          <Button href='/orders' placeholder='Go to your orders' />
+        </div>
       </div>
     </section>
   );
