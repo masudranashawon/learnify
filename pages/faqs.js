@@ -26,7 +26,15 @@ const FAQSection = ({ faqs }) => {
       {/* FAQ's MAIN SECTION */}
       <div className='w-full flex gap-10 mt-10'>
         <div className='hidden lg:block w-1/2'>
-          <div className='w-full h-[50rem] overflow-hidden rounded-xl'>
+          <div
+            data-aos='zoom-in-up'
+            data-aos-delay='1500'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            className='w-full h-[50rem] overflow-hidden rounded-xl'
+          >
             <Image
               src='https://images.pexels.com/photos/5428825/pexels-photo-5428825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Hands on Top of Paper Crafts'
@@ -36,7 +44,15 @@ const FAQSection = ({ faqs }) => {
             />
           </div>
         </div>
-        <div className='w-full lg:w-1/2'>
+        <div
+          data-aos='zoom-in-down'
+          data-aos-delay='2000'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          data-aos-mirror='true'
+          data-aos-once='false'
+          className='w-full lg:w-1/2'
+        >
           {faqs.map((faq, index) => (
             <div key={index} className='mb-4'>
               <button
