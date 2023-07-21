@@ -11,6 +11,8 @@ const Hero = () => {
             data-aos='fade-right'
             data-aos-duration='1000'
             data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
           >
             <span className='font-semibold text-gray-500 tracking-wider'>
               Join Now
@@ -54,6 +56,8 @@ const Hero = () => {
             data-aos='fade-left'
             data-aos-duration='1000'
             data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
           >
             <Image
               src='https://images.pexels.com/photos/6958520/pexels-photo-6958520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
