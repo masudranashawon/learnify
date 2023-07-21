@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* PAGES */}
           <div className='pages col-span-1 lg:col-span-1'>
-            <h4 className='text-xl font-bold mb-4 text-white'>Pages</h4>
+            <h4 className='text-xl font-bold mb-4 text-white'>Quick Links</h4>
             <ul className='text-md font-semibold flex flex-col gap-2'>
               <li>
                 <Link
@@ -61,14 +61,6 @@ const Footer = () => {
                   className='hover:text-white duration-300 hover:underline underline-offset-2'
                 >
                   Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/orders'
-                  className='hover:text-white duration-300 hover:underline underline-offset-2'
-                >
-                  Orders
                 </Link>
               </li>
               <li>
