@@ -45,7 +45,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className='w-full lg:w-1/2 flex justify-center overflow-hidden'>
+        <div className='w-full lg:w-1/2  overflow-hidden'>
           <div
             data-aos='fade-left'
             data-aos-delay='1500'
@@ -53,6 +53,7 @@ const AboutPage = () => {
             data-aos-easing='ease-in-out'
             data-aos-mirror='true'
             data-aos-once='false'
+            className='flex justify-center w-full'
           >
             <Image
               src='https://res.cloudinary.com/drgxflcsb/image/upload/v1684686852/learnify/about-image_i1hnxg.png'

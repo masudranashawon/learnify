@@ -5,7 +5,14 @@ import Button from "./Button";
 
 const CoursesItem = ({ course }) => {
   return (
-    <div className='course-card w-full lg:w-[30rem] shadow-md rounded-md overflow-hidden'>
+    <div
+      data-aos='fade-up'
+      data-aos-duration='1000'
+      data-aos-easing='ease-in-out'
+      data-aos-mirror='true'
+      data-aos-once='false'
+      className='course-card w-full lg:w-[30rem] shadow-md rounded-md overflow-hidden'
+    >
       <div className='course-image w-full h-[25rem] lg:h-[20rem] overflow-hidden'>
         <Image
           src={course.cover}
