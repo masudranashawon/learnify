@@ -9,5 +9,5 @@
 }
 
 .mobile-nav {
-  @apply flex flex-col fixed w-screen h-full bg-black/80 top-0 bottom-0 left-0 right-0 items-center justify-center gap-5 backdrop-blur-lg text-2xl text-gray-300 z-10;
+  @apply flex flex-col fixed w-screen h-screen bg-black/80 top-0 bottom-0 left-0 right-0 items-center justify-center gap-5 backdrop-blur-lg text-2xl text-gray-300 z-[900] overflow-hidden;
 }

@@ -4,7 +4,7 @@ import { BsQuote } from "react-icons/bs";
 
 const MobileTabTestimonialSlide = ({ testimonial }) => {
   return (
-    <div className='mobile-slider-wrapper h-4/6 flex items-center content-center mx-5 my-10'>
+    <div className='mobile-slider-wrapper h-4/6 flex items-center content-center mx-5 my-10 -z-10'>
       <div className='flex flex-col items-center content-center shadow-lg rounded-xl sm:p-10 p-5 relative mt-10'>
         {/* SLIDER IMAGE SECTION */}
         <div className='slider-image md:w-40 md:h-40 sm:w-32 sm:h-32 w-24 h-24 rounded-full overflow-hidden shadow-xl absolute left-1/2 -translate-x-1/2 -translate-y-1/2'>

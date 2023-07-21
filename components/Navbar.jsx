@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { useCallback, useState } from "react";
-import Button from "@/components/Button";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -20,15 +20,38 @@ const Navbar = () => {
   }, [toggleOpen]);
 
   return (
-    <header className='navbar w-full bg-black text-gray-400 h-20 flex items-center'>
+    <header
+      data-aos='slide-down'
+      data-aos-duration='1000'
+      data-aos-delay='500'
+      data-aos-easing='ease-in-out'
+      className='navbar w-full bg-black text-gray-400 h-20 flex items-center z-10'
+    >
       <div className='wrapper flex justify-between items-center'>
-        <div className='logo'>
-          <Link href='/' className='text-white font-semibold text-xl'>
-            Learnify
-          </Link>
+        {/* LOGO */}
+        <div className='overflow-hidden'>
+          <div
+            data-aos='slide-right'
+            data-aos-duration='1000'
+            data-aos-delay='1000'
+            data-aos-easing='ease-in-out'
+            className='logo'
+          >
+            <Link href='/' className='text-white font-semibold text-xl'>
+              Learnify
+            </Link>
+          </div>
         </div>
 
-        <nav className='nav-links' onClick={handleToggle}>
+        {/* NAV LINKS */}
+        <nav
+          data-aos='fade'
+          data-aos-duration='1000'
+          data-aos-delay='1500'
+          data-aos-easing='ease-in-out'
+          className='nav-links relative'
+          onClick={handleToggle}
+        >
           <ul
             className={`${toggleOpen ? "mobile-nav" : "hidden lg:flex gap-5"}`}
           >
@@ -87,24 +110,41 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <div className='flex gap-5 items-center'>
-          {!session ? (
-            <Button
-              href='/users/login'
-              placeholder='Sign in'
-              color='secondary'
-              size='default'
-            />
-          ) : (
-            <Button
-              href='/users/profile'
-              placeholder={session.user.name.split(" ", 1)}
-              color='secondary'
-              size='default'
-            />
-          )}
+        {/*SIGN AND USER PROFILE BUTTON */}
+        <div className='flex gap-5 items-center overflow-hidden'>
+          <div className='overflow-hidden'>
+            <div
+              data-aos='slide-left'
+              data-aos-duration='1000'
+              data-aos-delay='1000'
+              data-aos-easing='ease-in-out'
+            >
+              {!session ? (
+                <Button
+                  href='/users/login'
+                  placeholder='Sign in'
+                  color='secondary'
+                  size='default'
+                />
+              ) : (
+                <Button
+                  href='/users/profile'
+                  placeholder={session.user.name.split(" ", 1)}
+                  color='secondary'
+                  size='default'
+                />
+              )}
+            </div>
+          </div>
 
-          <span className='z-20'>
+          {/* HAMBURGER ICON*/}
+          <span
+            data-aos='slide-left'
+            data-aos-duration='1000'
+            data-aos-delay='1500'
+            data-aos-easing='ease-in-out'
+            className='z-[999]'
+          >
             <FiMenu
               onClick={handleToggle}
               className={`${

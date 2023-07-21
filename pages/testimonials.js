@@ -93,7 +93,7 @@ const TestimonialSlider = ({ testimonials }) => {
           </div>
 
           {/* SLIDER LOWER CONTROLLER */}
-          <div className='flex justify-center lg:mt-10'>
+          <div className='flex justify-center lg:mt-10 relative -z-10'>
             {testimonials.map((_, index) => (
               <button
                 key={index}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import { getAllFaqs } from "@/prisma/faqs";
 import SectionHeader from "@/components/SectionHeader";
+import Image from "next/image";
 
 const FAQSection = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -15,7 +16,7 @@ const FAQSection = ({ faqs }) => {
   };
 
   return (
-    <section className='faqs wrapper py-10 md:py-20  min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className='faqs wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
       <SectionHeader
         heading='Frequently Asked Questions'
         subHeading='FAQ'
@@ -23,31 +24,44 @@ const FAQSection = ({ faqs }) => {
       />
 
       {/* FAQ's MAIN SECTION */}
-      <div className='max-w-3xl mx-auto px-4 py-8'>
-        {faqs.map((faq, index) => (
-          <div key={index} className='mb-4'>
-            <button
-              className='w-full flex items-center justify-between p-4 rounded-lg bg-white border border-gray-300 mb-2'
-              onClick={() => toggleAccordion(index)}
-            >
-              <span className='font-semibold'>{faq.question}</span>
-              <span>
-                {activeIndex === index ? (
-                  <FiChevronUp size={30} />
-                ) : (
-                  <FiChevronDown size={30} />
-                )}
-              </span>
-            </button>
-            {activeIndex === index && (
-              <div
-                className={` px-4 py-2 bg-white border border-gray-300 rounded-b-lg`}
-              >
-                <p>{faq.answer}</p>
-              </div>
-            )}
+      <div className='w-full flex gap-10 mt-10'>
+        <div className='hidden lg:block w-1/2'>
+          <div className='w-full h-[50rem] overflow-hidden rounded-xl'>
+            <Image
+              src='https://images.pexels.com/photos/5428825/pexels-photo-5428825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              alt='Hands on Top of Paper Crafts'
+              width={1910}
+              height={2861}
+              className='w-full h-full object-cover'
+            />
           </div>
-        ))}
+        </div>
+        <div className='w-full lg:w-1/2'>
+          {faqs.map((faq, index) => (
+            <div key={index} className='mb-4'>
+              <button
+                className='w-full flex items-center justify-between p-4 rounded-lg bg-white border border-gray-300 mb-2'
+                onClick={() => toggleAccordion(index)}
+              >
+                <span className='font-semibold'>{faq.question}</span>
+                <span>
+                  {activeIndex === index ? (
+                    <FiChevronUp size={30} />
+                  ) : (
+                    <FiChevronDown size={30} />
+                  )}
+                </span>
+              </button>
+              {activeIndex === index && (
+                <div
+                  className={`px-4 py-2 bg-white border border-gray-400 rounded-b-lg shadow-lg`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
