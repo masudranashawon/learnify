@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
 import prisma from "@/prisma/prisma";
 import SectionHeader from "@/components/SectionHeader";
-import Order from "@/components/order";
+import OrderItem from "@/components/OrderItem";
 
 const OrdersPage = ({ session, customer }) => {
   const router = useRouter();
@@ -32,7 +32,7 @@ const OrdersPage = ({ session, customer }) => {
 
       <div className='courses w-full flex flex-wrap gap-10 mt-10'>
         {customer.orders.map((course, i) => (
-          <Order key={course.id} course={course} i={i + 1} />
+          <OrderItem key={course.id} course={course} i={i + 1} />
         ))}
       </div>
     </section>

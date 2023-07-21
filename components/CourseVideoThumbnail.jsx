@@ -2,7 +2,14 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const CourseVideoThumbnail = () => {
   return (
-    <div className='course-thumbnail cursor-pointer bg-gray-200 border-2 border-gray-300 xl:h-[10rem] h-[10rem] sm:h-[20rem] md:h-[13rem] flex items-center justify-center rounded-xl'>
+    <div
+      data-aos='zoom-in'
+      data-aos-duration='1000'
+      data-aos-easing='ease-in-out'
+      data-aos-mirror='true'
+      data-aos-once='false'
+      className='course-thumbnail cursor-pointer bg-gray-200 border-2 border-gray-300 xl:h-[10rem] h-[10rem] sm:h-[20rem] md:h-[13rem] flex items-center justify-center rounded-xl'
+    >
       <IoLogoYoutube color='red' size={65} />
     </div>
   );

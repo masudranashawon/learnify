@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { currencyConverter } from "@/utils/currencyConverter";
+import { toast } from "react-toastify";
 import Button from "@/components/Button";
 import axios from "axios";
 import Image from "next/image";
-import { toast } from "react-toastify";
 
-const Order = ({ course, i }) => {
+const OrderItem = ({ course, i }) => {
   const [orderCourse, setOrderCourse] = useState({});
-  console.log(orderCourse);
+
   useEffect(() => {
     const getCourse = async () => {
       try {
@@ -35,7 +35,14 @@ const Order = ({ course, i }) => {
 
   if (orderCourse.cover && course) {
     return (
-      <div className='order w-full shadow-lg p-8 rounded-lg flex flex-col lg:flex-row gap-5 lg:gap-10'>
+      <div
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-easing='ease-in-out'
+        data-aos-mirror='true'
+        data-aos-once='false'
+        className='order-item w-full shadow-md hover:shadow-xl duration-300 p-8 rounded-lg flex flex-col lg:flex-row gap-5 lg:gap-10'
+      >
         <div className='order-card w-full lg:w-1/3 space-y-2'>
           <span className='font-bold uppercase'>
             course {String(i).padStart(2, 0)}
@@ -59,7 +66,7 @@ const Order = ({ course, i }) => {
           <h2 className='text-2xl lg:text-4xl font-semibold'>
             {course.courseTitle}
           </h2>
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between flex-wrap gap-2 lg:gap-0 items-center'>
             <p className='text-lg text-gray-500'>
               Price: {currencyConverter(course.amountTotal)}
             </p>
@@ -74,4 +81,4 @@ const Order = ({ course, i }) => {
   }
 };
 
-export default Order;
+export default OrderItem;
