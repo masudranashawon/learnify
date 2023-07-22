@@ -6,7 +6,7 @@ import CourseVideoThumbnail from "@/components/CourseVideoThumbnail";
 const CourseVideoPage = ({ course }) => {
   return (
     <div className='wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
-      <div className='course-info flex gap-10 pb-10 border-b border-gray-300'>
+      <div className='course-info flex gap-10 pb-10 border-b border-gray-300 overflow-hidden'>
         {/* COURSE INFO */}
         <div
           data-aos='fade-right'
