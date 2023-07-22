@@ -1,11 +1,27 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { getSession } from "next-auth/react";
 import { getSingleCourse } from "@/prisma/courses";
 import { AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
+import prisma from "@/prisma/prisma";
 import CourseVideoThumbnail from "@/components/CourseVideoThumbnail";
 
-const CourseVideoPage = ({ course }) => {
+const CourseVideoPage = ({ course, session, customer }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!session) {
+      router.replace("/users/login");
+    }
+  }, [session, router]);
+
+  if (!session && !customer) {
+    return null;
+  }
+
   return (
-    <div className='wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
+    <div className='wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)] overflow-hidden'>
       <div className='course-info flex gap-10 pb-10 border-b border-gray-300 overflow-hidden'>
         {/* COURSE INFO */}
         <div
@@ -67,7 +83,7 @@ const CourseVideoPage = ({ course }) => {
           />
         </div>
       </div>
-      <div className='course-videos grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 md:mt-20'>
+      <div className='course-videos grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 md:mt-20 overflow-hidden'>
         <CourseVideoThumbnail />
         <CourseVideoThumbnail />
         <CourseVideoThumbnail />
@@ -93,8 +109,40 @@ const CourseVideoPage = ({ course }) => {
 
 export default CourseVideoPage;
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps = async (context) => {
+  // Access the query parameters from context
+  const { query } = context;
+
   const course = await getSingleCourse(query.courseId);
+
+  const session = await getSession(context);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/users/login",
+        permanent: true,
+      },
+    };
+  }
+
+  const customer = await prisma.user.findUnique({
+    where: {
+      email: session?.user?.email,
+    },
+    include: {
+      orders: true,
+    },
+  });
+
+  if (!customer) {
+    return {
+      redirect: {
+        destination: "/users/login",
+        permanent: true,
+      },
+    };
+  }
 
   const updatedCourse = {
     ...course,
@@ -102,9 +150,23 @@ export const getServerSideProps = async ({ query }) => {
     createdAt: course.createdAt.toString(),
   };
 
+  const updatedCustomer = {
+    ...customer,
+    createdAt: customer.createdAt.toString(),
+    updatedAt: customer.updatedAt.toString(),
+
+    orders: customer.orders.map((order) => ({
+      ...order,
+      createdAt: order.createdAt.toString(),
+      updatedAt: order.updatedAt.toString(),
+    })),
+  };
+
   return {
     props: {
       course: updatedCourse,
+      session,
+      customer: updatedCustomer,
     },
   };
 };
