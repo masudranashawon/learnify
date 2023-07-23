@@ -201,7 +201,7 @@ const Footer = () => {
         {/* COPYRIGHT */}
         <div className='copyright text-md py-10 border-t border-gray-500 text-center text-gray-400 overflow-hidden'>
           <p
-            data-aos='fade-up'
+            data-aos='fade'
             data-aos-anchor-placement='top-bottom'
             data-aos-duration='1000'
             data-aos-delay='800'

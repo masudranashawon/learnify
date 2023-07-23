@@ -25,7 +25,7 @@ const Navbar = () => {
       data-aos-duration='1000'
       data-aos-delay='500'
       data-aos-easing='ease-in-out'
-      className='navbar w-full bg-black text-gray-400 h-20 flex items-center z-10'
+      className='navbar w-full bg-black text-gray-400 h-20 flex items-center z-10 relative'
     >
       <div className='wrapper flex justify-between items-center'>
         {/* LOGO */}
