@@ -54,7 +54,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className='contact wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
+    <section className='contact wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)] overflow-hidden'>
       <SectionHeader
         subHeading='Contact'
         heading='Get in Touch'
@@ -81,13 +81,13 @@ const ContactPage = () => {
           />
         </div>
 
-        <div className='w-full lg:w-1/2'>
+        <div className='w-full lg:w-1/2 overflow-hidden'>
           <form
             onSubmit={sendEmail}
             ref={formRef}
             className='contact-form flex flex-col gap-5'
           >
-            <div className='row grid grid-cols-1 lg:grid-cols-2 gap-5'>
+            <div className='row grid grid-cols-1 lg:grid-cols-2 gap-5 overflow-hidden'>
               <div className='overflow-hidden'>
                 <div
                   data-aos='fade-right'

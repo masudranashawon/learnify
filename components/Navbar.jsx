@@ -27,7 +27,7 @@ const Navbar = () => {
       data-aos-easing='ease-in-out'
       className='navbar w-full bg-black text-gray-400 h-20 flex items-center z-10 relative'
     >
-      <div className='wrapper flex justify-between items-center'>
+      <div className='wrapper flex justify-between items-center overflow-hidden'>
         {/* LOGO */}
         <div className='overflow-hidden'>
           <div

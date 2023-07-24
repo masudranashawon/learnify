@@ -16,41 +16,112 @@ const CourseDetails = ({ course }) => {
   };
 
   return (
-    <section className='wrapper py-10 md:py-20 min-h-screen'>
-      <div
-        style={{ backgroundImage: `url(${course.cover})` }}
-        className='course-cover w-full h-[30rem] object-cover bg-no-repeat bg-cover bg-center'
-      />
+    <section className='wrapper py-10 md:py-20 min-h-screen overflow-hidden'>
+      <div className='overflow-hidden'>
+        <div
+          data-aos='slide-down'
+          data-aos-duration='1000'
+          data-aos-easing='ease-in-out'
+          data-aos-mirror='true'
+          data-aos-once='false'
+          style={{ backgroundImage: `url(${course.cover})` }}
+          className='course-cover w-full h-[30rem] object-cover bg-no-repeat bg-cover bg-center'
+        />
+      </div>
 
-      <div className='course-content mt-10 grid lg:grid-cols-2 lg:gap-10 space-y-2 lg:space-y-0"'>
-        <div className='space-y-2'>
-          <h2 className='text-3xl font-semibold'>{course.title}</h2>
-          <p>
-            <span className='font-semibold'>Instructor:</span>{" "}
-            {course.instructor}
-          </p>
-          <p>
-            <span className='font-semibold'>Entrolled Students:</span>{" "}
-            {course.students}
-          </p>
-          <p>
-            <span className='font-semibold'>Course Description:</span>{" "}
-            {course.description}
-          </p>
+      <div className='course-content mt-10 grid lg:grid-cols-2 lg:gap-10 space-y-2 lg:space-y-0 overflow-hidden'>
+        <div className='space-y-2 overflow-hidden'>
+          <h2
+            data-aos='fade-down'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            className='text-3xl font-semibold'
+          >
+            {course.title}
+          </h2>
+          <div className='overflow-hidden'>
+            <p
+              data-aos='fade-down'
+              data-aos-duration='1000'
+              data-aos-delay='500'
+              data-aos-easing='ease-in-out'
+              data-aos-mirror='true'
+              data-aos-once='false'
+            >
+              <span className='font-semibold'>Instructor:</span>{" "}
+              {course.instructor}
+            </p>
+          </div>
+          <div className='overflow-hidden'>
+            <p
+              data-aos='fade-down'
+              data-aos-duration='1000'
+              data-aos-delay='900'
+              data-aos-easing='ease-in-out'
+              data-aos-mirror='true'
+              data-aos-once='false'
+            >
+              <span className='font-semibold'>Entrolled Students:</span>{" "}
+              {course.students}
+            </p>
+          </div>
+          <div className='overflow-hidden'>
+            <p
+              data-aos='fade-down'
+              data-aos-delay='1400'
+              data-aos-duration='1000'
+              data-aos-easing='ease-in-out'
+              data-aos-mirror='true'
+              data-aos-once='false'
+            >
+              <span className='font-semibold'>Course Description:</span>{" "}
+              {course.description}
+            </p>
+          </div>
         </div>
 
-        <div className='space-y-2'>
-          <p>
+        <div className='space-y-2 overflow-hidden'>
+          <p
+            data-aos='fade-down'
+            data-aos-duration='1000'
+            data-aos-delay='1800'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             <span className='font-semibold'>Course Duration:</span>{" "}
             {course.duration}
           </p>
-          <p>
+          <p
+            data-aos='fade-down'
+            data-aos-delay='2000'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             <span className='font-semibold'>Rating:</span> {course.rating}
           </p>
-          <p className='text-3xl font-semibold'>
+          <p
+            data-aos='fade-down'
+            data-aos-delay='2400'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            className='text-3xl font-semibold'
+          >
             Price: {currencyConverter(course.price)}
           </p>
           <button
+            data-aos='zoom-in'
+            data-aos-duration='1000'
+            data-aos-easing='ease-in-out'
+            data-aos-delay='2500'
+            data-aos-mirror='true'
+            data-aos-once='false'
             onClick={handleEnroll}
             className='bg-black text-white py-3 rounded-lg w-full hover:bg-gray-700 duration-300'
           >

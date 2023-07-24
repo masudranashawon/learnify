@@ -45,7 +45,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className='w-full lg:w-1/2  overflow-hidden'>
+        <div className='w-full lg:w-1/2 overflow-hidden'>
           <div
             data-aos='fade-left'
             data-aos-delay='1500'
