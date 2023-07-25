@@ -18,8 +18,8 @@ const SuccessPage = ({ session }) => {
   }
 
   return (
-    <section className='success wrapper py-10 md:py-20 min-h-screen 2xl:h-[calc(100vh-6rem)] flex justify-center'>
-      <div className='text-center w-full lg:w-[50rem] flex flex-col items-center space-y-2'>
+    <section className='success wrapper py-10 md:py-20 min-h-screen 2xl:h-[calc(100vh-6rem)] flex justify-center overflow-hidden'>
+      <div className='text-center w-full lg:w-[50rem] flex flex-col items-center space-y-2 overflow-hidden'>
         <div
           data-aos='fade-down'
           data-aos-duration='1000'
