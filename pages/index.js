@@ -13,14 +13,15 @@ const HomePage = ({ courses, testimonials, faqs }) => {
   return (
     <>
       <Head>
-        <title>Learnify | Empowering minds inspiring growth</title>
+        <title>Learnify | Where Learning Finds Its Simplest Path</title>
         <meta
           name='description'
           content='Discover a world of knowledge and excellence at Learnify. We offer a wide range of comprehensive courses and expert-led programs designed to empower learners of all ages. Unlock your potential, pursue your passions, and embark on a journey of continuous growth. Join our vibrant learning community today.'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='../public/favicon.ico' />
+        <link rel='icon' type='image/x-icon' href='./public/favicon.ico' />
       </Head>
+
       <main>
         <Hero />
         <AboutPage />

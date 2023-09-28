@@ -23,7 +23,6 @@ const SuccessPage = ({ session }) => {
         <div
           data-aos='fade-down'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
           className='flex justify-center items-center gap-2 text-2xl lg:text-3xl'
         >
           <span className='text-emerald-500'>
@@ -37,19 +36,13 @@ const SuccessPage = ({ session }) => {
           data-aos='fade-down'
           data-aos-delay='1000'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
           className='text-lg text-center text-gray-500'
         >
           {`Thank you for choosing to enhance your skills and knowledge with our
           course. We are excited to have you as a student, and we can't wait to
           embark on this educational journey together.`}
         </p>
-        <div
-          data-aos='zoom-in'
-          data-aos-delay='1500'
-          data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-        >
+        <div data-aos='zoom-in' data-aos-delay='1500' data-aos-duration='1000'>
           <Button href='/orders' placeholder='Go to your orders' />
         </div>
       </div>

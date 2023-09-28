@@ -40,9 +40,6 @@ const OrderItem = ({ course, i }) => {
       <div
         data-aos='fade-up'
         data-aos-duration='1000'
-        data-aos-easing='ease-in-out'
-        data-aos-mirror='true'
-        data-aos-once='false'
         className='order-item w-full shadow-md hover:shadow-xl duration-300 p-8 rounded-lg flex flex-col lg:flex-row gap-5 lg:gap-10'
       >
         <div className='order-card w-full lg:w-1/3 space-y-2'>

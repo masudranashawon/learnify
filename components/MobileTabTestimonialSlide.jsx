@@ -29,6 +29,7 @@ const MobileTabTestimonialSlide = ({ testimonial }) => {
           <h3 className='font-bold md:text-3xl text-lg sm:text-2xl mt-16 sm:mt-20 md:mt-28 text-center'>
             {testimonial.studentName}
           </h3>
+
           {/* ROLE AND RATING */}
           <p className='flex justify-between font-semibold text-gray-600 md:text-2xl sm:text-xl text-md w-full'>
             <span className='role'>{testimonial.role}</span>
@@ -37,6 +38,7 @@ const MobileTabTestimonialSlide = ({ testimonial }) => {
               {String(testimonial.rating).padEnd(3, ".0")}
             </span>
           </p>
+
           {/* STUDENT FEEDBACK */}
           <p className='text-center'>
             <span className='md:leading-[1.6] sm:text-lg text-sm text-center block mt-5'>

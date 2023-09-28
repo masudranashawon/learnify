@@ -106,9 +106,6 @@ const Checkout = ({ course }) => {
             <div
               data-aos='fade-right'
               data-aos-duration='1000'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='name' className='cursor-pointer'>
@@ -128,9 +125,6 @@ const Checkout = ({ course }) => {
               data-aos='fade-left'
               data-aos-duration='1000'
               data-aos-delay='1400'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='email' className='cursor-pointer'>
@@ -152,9 +146,6 @@ const Checkout = ({ course }) => {
               data-aos='fade-right'
               data-aos-duration='1000'
               data-aos-delay='500'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='mobile' className='cursor-pointer'>
@@ -177,9 +168,6 @@ const Checkout = ({ course }) => {
               data-aos='fade-left'
               data-aos-delay='1800'
               data-aos-duration='1000'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='address' className='cursor-pointer'>
@@ -204,9 +192,6 @@ const Checkout = ({ course }) => {
               data-aos='fade-right'
               data-aos-duration='1000'
               data-aos-delay='1000'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='courseTitle' className='cursor-pointer'>
@@ -226,9 +211,6 @@ const Checkout = ({ course }) => {
               data-aos='fade-left'
               data-aos-duration='1000'
               data-aos-delay='2200'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
               className='form-control w-full flex flex-col gap-2'
             >
               <label htmlFor='price' className='cursor-pointer'>
@@ -249,9 +231,6 @@ const Checkout = ({ course }) => {
             data-aos='zoom-in'
             data-aos-delay='2500'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
             role='link'
             type='submit'
             className='bg-black py-4 px-6 rounded-lg text-white uppercase hover:bg-gray-700 duration-300 self-end flex items-center justify-center gap-2 mt-5 w-full lg:w-auto'

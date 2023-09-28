@@ -6,6 +6,7 @@ const Footer = () => {
     <footer
       data-aos='fade'
       data-aos-duration='1000'
+      data-aos-once='true'
       className='bg-black pt-20 text-gray-400'
     >
       <div className='wrapper mx-auto'>
@@ -13,8 +14,8 @@ const Footer = () => {
           <div
             data-aos='slide-up'
             data-aos-delay='500'
+            data-aos-once='true'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-5 items-start w-full pb-10'
           >
             <div className='company-intro col-span-1 lg:col-span-2'>
@@ -198,6 +199,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         {/* COPYRIGHT */}
         <div className='copyright text-md py-10 border-t border-gray-500 text-center text-gray-400 overflow-hidden'>
           <p
@@ -205,8 +207,9 @@ const Footer = () => {
             data-aos-anchor-placement='top-bottom'
             data-aos-duration='1000'
             data-aos-delay='800'
+            data-aos-once='true'
           >
-            &copy; {new Date().getFullYear()}, Learnify. All rights reserved.
+            &copy; {new Date().getFullYear()}, Learnify. All rights reserved
           </p>
         </div>
       </div>

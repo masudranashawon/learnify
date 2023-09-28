@@ -7,13 +7,7 @@ const Hero = () => {
     <section className='hero wrapper py-10 md:py-20 sm:h-auto lg:min-h-screen lg:h-screen 2xl:h-[calc(100vh-6rem)]'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
         <div className='hero-left row-start-2 lg:row-start-auto overflow-hidden'>
-          <div
-            data-aos='fade-right'
-            data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <div data-aos='fade-right' data-aos-duration='1000'>
             <span className='font-semibold text-gray-500 tracking-wider'>
               Join Now
             </span>
@@ -52,13 +46,7 @@ const Hero = () => {
         </div>
 
         <div className='hero-right row-start-1 lg:row-start-auto overflow-hidden'>
-          <div
-            data-aos='fade-left'
-            data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <div data-aos='fade-left' data-aos-duration='1000'>
             <Image
               src='https://images.pexels.com/photos/6958520/pexels-photo-6958520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt='Man in Hoodie Sweater Using a Laptop'

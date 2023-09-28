@@ -64,11 +64,8 @@ const ContactPage = () => {
       <div className='flex flex-col lg:flex-row gap-10 mt-10'>
         <div
           data-aos='zoom-out'
-          data-aos-delay='1500'
+          data-aos-delay='800'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='w-full lg:w-1/2 flex justify-center p-5'
         >
           <Image
@@ -91,12 +88,8 @@ const ContactPage = () => {
               <div className='overflow-hidden'>
                 <div
                   data-aos='fade-right'
-                  data-aos-delay='2000'
+                  data-aos-delay='1000'
                   data-aos-duration='1000'
-                  data-aos-easing='ease-in-out'
-                  data-aos-mirror='true'
-                  data-aos-once='false'
-                  data-aos-anchor='.row'
                   className='form-control w-full flex flex-col gap-2'
                 >
                   <label htmlFor='name' className='cursor-pointer'>
@@ -116,12 +109,8 @@ const ContactPage = () => {
               <div className='overflow-hidden'>
                 <div
                   data-aos='fade-left'
-                  data-aos-delay='2000'
+                  data-aos-delay='1000'
                   data-aos-duration='1000'
-                  data-aos-anchor='.row'
-                  data-aos-easing='ease-in-out'
-                  data-aos-mirror='true'
-                  data-aos-once='false'
                   className='form-control flex flex-col gap-2'
                 >
                   <label htmlFor='number' className='cursor-pointer'>
@@ -141,12 +130,8 @@ const ContactPage = () => {
             <div className='overflow-hidden email-ctrl'>
               <div
                 data-aos='fade-down'
-                data-aos-delay='2000'
+                data-aos-delay='1000'
                 data-aos-duration='1000'
-                data-aos-easing='ease-in-out'
-                data-aos-mirror='true'
-                data-aos-anchor='.email-ctrl'
-                data-aos-once='false'
                 className='form-control flex flex-col gap-2'
               >
                 <label htmlFor='email' className='cursor-pointer '>
@@ -167,11 +152,7 @@ const ContactPage = () => {
               <div
                 data-aos='fade-down'
                 data-aos-duration='1000'
-                data-aos-delay='2000'
-                data-aos-easing='ease-in-out'
-                data-aos-mirror='true'
-                data-aos-once='false'
-                data-aos-anchor='.message-ctrl'
+                data-aos-delay='1000'
                 className='form-control flex flex-col gap-2'
               >
                 <label htmlFor='message' className='cursor-pointer'>
@@ -191,12 +172,8 @@ const ContactPage = () => {
 
             <button
               data-aos='fade-up'
-              data-aos-delay='2000'
+              data-aos-delay='1000'
               data-aos-duration='1000'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
-              data-aos-anchor='.message'
               type='submit'
               className='submit px-4 py-4 rounded-xl text-white bg-black hover:bg-gray-700 duration-300 flex items-center justify-center gap-2 overflow-hidden'
             >

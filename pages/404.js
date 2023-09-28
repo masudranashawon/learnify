@@ -7,7 +7,6 @@ const NotFoundPage = () => {
         <h1
           data-aos='zoom-in-down'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
           className='text-6xl text-gray-900 font-bold lg:text-8xl'
         >
           404
@@ -16,17 +15,11 @@ const NotFoundPage = () => {
           data-aos='fade-down'
           data-aos-delay='500'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
           className='text-xl text-center'
         >
           {"Oops! The page you are looking for doesn't exist."}
         </p>
-        <div
-          data-aos='zoom-in'
-          data-aos-delay='1000'
-          data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-        >
+        <div data-aos='zoom-in' data-aos-delay='1000' data-aos-duration='1000'>
           <Button href='/' placeholder='Back to Home' color='danger' />
         </div>
       </div>

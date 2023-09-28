@@ -27,9 +27,6 @@ const CourseVideoPage = ({ course, session, customer }) => {
         <div
           data-aos='fade-right'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='w-full lg:w-1/2 flex flex-col gap-5'
         >
           <h3 className='lg:text-4xl text-2xl mb-2'>{course.title}</h3>
@@ -68,9 +65,6 @@ const CourseVideoPage = ({ course, session, customer }) => {
         <div
           data-aos='fade-left'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='hidden lg:block lg:w-1/2 h-[20rem] overflow-hidden rounded-xl'
         >
           <Image
@@ -83,6 +77,7 @@ const CourseVideoPage = ({ course, session, customer }) => {
           />
         </div>
       </div>
+
       <div className='course-videos grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 md:mt-20 overflow-hidden'>
         <CourseVideoThumbnail />
         <CourseVideoThumbnail />
@@ -96,9 +91,6 @@ const CourseVideoPage = ({ course, session, customer }) => {
       <div
         data-aos='fade'
         data-aos-duration='1000'
-        data-aos-easing='ease-in-out'
-        data-aos-mirror='true'
-        data-aos-once='false'
         className='notis text-rose-500 bg-rose-200 border-rose-500 border-2 p-2 font-semibold mt-5 inline-block'
       >
         <p>Notice: Video functionality is not yet implemented !</p>

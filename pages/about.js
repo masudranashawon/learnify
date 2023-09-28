@@ -14,11 +14,8 @@ const AboutPage = () => {
         <div className='w-full lg:w-1/2 space-y-2 overflow-hidden'>
           <div
             data-aos='fade-right'
-            data-aos-delay='1500'
+            data-aos-delay='700'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
           >
             <p className='text-lg'>
               We are a passionate community of educators, learners, and
@@ -48,11 +45,8 @@ const AboutPage = () => {
         <div className='w-full lg:w-1/2 overflow-hidden'>
           <div
             data-aos='fade-left'
-            data-aos-delay='1500'
+            data-aos-delay='700'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
             className='flex justify-center w-full'
           >
             <Image

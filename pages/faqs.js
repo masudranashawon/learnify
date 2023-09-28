@@ -28,11 +28,8 @@ const FAQSection = ({ faqs }) => {
         <div className='hidden lg:block w-1/2'>
           <div
             data-aos='zoom-in-up'
-            data-aos-delay='1500'
+            data-aos-delay='800'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
             className='w-full h-[50rem] overflow-hidden rounded-xl'
           >
             <Image
@@ -46,11 +43,8 @@ const FAQSection = ({ faqs }) => {
         </div>
         <div
           data-aos='zoom-in-down'
-          data-aos-delay='2000'
+          data-aos-delay='1000'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='w-full lg:w-1/2'
         >
           {faqs.map((faq, index) => (

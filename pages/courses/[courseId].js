@@ -21,9 +21,6 @@ const CourseDetails = ({ course }) => {
         <div
           data-aos='slide-down'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           style={{ backgroundImage: `url(${course.cover})` }}
           className='course-cover w-full h-[30rem] object-cover bg-no-repeat bg-cover bg-center'
         />
@@ -34,9 +31,6 @@ const CourseDetails = ({ course }) => {
           <h2
             data-aos='fade-down'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
             className='text-3xl font-semibold'
           >
             {course.title}
@@ -46,9 +40,6 @@ const CourseDetails = ({ course }) => {
               data-aos='fade-down'
               data-aos-duration='1000'
               data-aos-delay='500'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='font-semibold'>Instructor:</span>{" "}
               {course.instructor}
@@ -59,9 +50,6 @@ const CourseDetails = ({ course }) => {
               data-aos='fade-down'
               data-aos-duration='1000'
               data-aos-delay='900'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='font-semibold'>Entrolled Students:</span>{" "}
               {course.students}
@@ -72,9 +60,6 @@ const CourseDetails = ({ course }) => {
               data-aos='fade-down'
               data-aos-delay='1400'
               data-aos-duration='1000'
-              data-aos-easing='ease-in-out'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='font-semibold'>Course Description:</span>{" "}
               {course.description}
@@ -87,9 +72,6 @@ const CourseDetails = ({ course }) => {
             data-aos='fade-down'
             data-aos-duration='1000'
             data-aos-delay='1800'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
           >
             <span className='font-semibold'>Course Duration:</span>{" "}
             {course.duration}
@@ -98,9 +80,6 @@ const CourseDetails = ({ course }) => {
             data-aos='fade-down'
             data-aos-delay='2000'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
           >
             <span className='font-semibold'>Rating:</span> {course.rating}
           </p>
@@ -108,9 +87,6 @@ const CourseDetails = ({ course }) => {
             data-aos='fade-down'
             data-aos-delay='2400'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
             className='text-3xl font-semibold'
           >
             Price: {currencyConverter(course.price)}
@@ -118,10 +94,7 @@ const CourseDetails = ({ course }) => {
           <button
             data-aos='zoom-in'
             data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
             data-aos-delay='2500'
-            data-aos-mirror='true'
-            data-aos-once='false'
             onClick={handleEnroll}
             className='bg-black text-white py-3 rounded-lg w-full hover:bg-gray-700 duration-300'
           >

@@ -40,14 +40,7 @@ const TestimonialSlider = ({ testimonials }) => {
       <div className='testimonial-wrapper wrapper lg:gap-10 gap-5 grid grid-cols-5 lg:h-screen h-auto items-center overflow-hidden'>
         {/* LEFT SIDE FOR SECTION CONTENT */}
         <div className='slider-left flex flex-col gap-5 justify-start items-start col-span-5 lg:col-span-2 lg:p-5 overflow-hidden'>
-          <div
-            data-aos='flip-down'
-            data-aos-duration='1000'
-            data-aos-easing='ease-in-out'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            data-aos-delay='500'
-          >
+          <div data-aos='fade-right' data-aos-duration='1000'>
             <span className='font-semibold text-gray-500 tracking-wider'>
               Testimonial
             </span>
@@ -81,12 +74,8 @@ const TestimonialSlider = ({ testimonials }) => {
 
         {/* RIGHT SIDE FOR SLIDER CONTENT */}
         <div
-          data-aos='flip-left'
-          data-aos-delay='1000'
+          data-aos='fade-left'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='slider-right col-span-5 lg:col-span-3 relative w-full lg:h-[30rem] h-auto overflow-hidden'
         >
           {/* MAIN SLIDER */}

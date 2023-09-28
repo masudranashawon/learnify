@@ -5,9 +5,6 @@ const SectionHeader = ({ subHeading, heading, pera }) => {
         <p
           data-aos='slide-down'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='uppercase text-sm font-bold tracking-widest'
         >
           {subHeading}
@@ -16,11 +13,8 @@ const SectionHeader = ({ subHeading, heading, pera }) => {
       <div className='overflow-hidden'>
         <h2
           data-aos='slide-down'
-          data-aos-delay='500'
+          data-aos-delay='400'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='text-3xl'
         >
           {heading}
@@ -29,11 +23,8 @@ const SectionHeader = ({ subHeading, heading, pera }) => {
       <div className='overflow-hidden w-3/5'>
         <p
           data-aos='slide-up'
-          data-aos-delay='1000'
+          data-aos-delay='600'
           data-aos-duration='1000'
-          data-aos-easing='ease-in-out'
-          data-aos-mirror='true'
-          data-aos-once='false'
           className='text-center text-gray-500'
         >
           {pera}
