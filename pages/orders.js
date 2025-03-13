@@ -19,7 +19,7 @@ const OrdersPage = ({ session, customer }) => {
   }
 
   return (
-    <section className='wrapper py-10 md:py-20 min-h-screen 2xl:h-[calc(100vh-6rem)]'>
+    <section className="wrapper py-10 md:py-20 min-h-screen 2xl:min-h-[calc(100vh-6rem)]">
       <SectionHeader
         subHeading={"orders"}
         heading={`You have enrolled ${customer.orders.length} course${
@@ -30,7 +30,7 @@ const OrdersPage = ({ session, customer }) => {
         }
       />
 
-      <div className='courses w-full flex flex-wrap gap-10 mt-10'>
+      <div className="courses w-full flex flex-wrap gap-10 mt-10">
         {customer.orders.map((course, i) => (
           <OrderItem key={course.id} course={course} i={i + 1} />
         ))}

@@ -16,44 +16,44 @@ const FAQSection = ({ faqs }) => {
   };
 
   return (
-    <section className='faqs wrapper py-10 md:py-20 2xl:h-[calc(100vh-6rem)]'>
+    <section className="faqs wrapper py-10 md:py-20 2xl:min-h-[calc(100vh-6rem)]">
       <SectionHeader
-        heading='Frequently Asked Questions'
-        subHeading='FAQ'
-        pera='Find answers to common questions about our courses and the purchasing process.'
+        heading="Frequently Asked Questions"
+        subHeading="FAQ"
+        pera="Find answers to common questions about our courses and the purchasing process."
       />
 
       {/* FAQ's MAIN SECTION */}
-      <div className='w-full flex gap-10 mt-10'>
-        <div className='hidden lg:block w-1/2'>
+      <div className="w-full flex gap-10 mt-10">
+        <div className="hidden lg:block w-1/2">
           <div
-            data-aos='zoom-in-up'
-            data-aos-delay='800'
-            data-aos-duration='1000'
-            className='w-full h-[50rem] overflow-hidden rounded-xl'
+            data-aos="zoom-in-up"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            className="w-full h-[50rem] overflow-hidden rounded-xl"
           >
             <Image
-              src='https://images.pexels.com/photos/5428825/pexels-photo-5428825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-              alt='Hands on Top of Paper Crafts'
+              src="https://images.pexels.com/photos/5428825/pexels-photo-5428825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Hands on Top of Paper Crafts"
               width={1910}
               height={2861}
-              className='w-full h-full object-cover'
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
         <div
-          data-aos='zoom-in-down'
-          data-aos-delay='1000'
-          data-aos-duration='1000'
-          className='w-full lg:w-1/2'
+          data-aos="zoom-in-down"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+          className="w-full lg:w-1/2"
         >
           {faqs.map((faq, index) => (
-            <div key={index} className='mb-4'>
+            <div key={index} className="mb-4">
               <button
-                className='w-full flex items-center justify-between p-4 rounded-lg bg-white border border-gray-300 mb-2'
+                className="w-full flex items-center justify-between p-4 rounded-lg bg-white border border-gray-300 mb-2"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className='font-semibold'>{faq.question}</span>
+                <span className="font-semibold">{faq.question}</span>
                 <span>
                   {activeIndex === index ? (
                     <FiChevronUp size={30} />
