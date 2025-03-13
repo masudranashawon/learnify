@@ -34,7 +34,6 @@ Proxima is built using the MERN stack, featuring the following powerful tools:
 - [Prisma](https://www.prisma.io/): A powerful ORM (Object-Relational Mapping) for database management and seamless data handling.
 - [Stripe](https://stripe.com/): A secure and reliable platform for processing payments and managing subscriptions.
 - [Micro](https://github.com/vercel/micro): A minimalistic microservice framework for Node.js.
-- [Google Cloud Platform (GCP)](https://cloud.google.com/): A robust cloud infrastructure for secure, scalable, and reliable services.
 - [Axios](https://axios-http.com/): A popular HTTP client for making asynchronous API requests from the browser.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for creating flexible and responsive designs.
 - [Email.js](https://www.emailjs.com/): Simplify sending emails directly from your website without the need for a backend.
@@ -53,7 +52,7 @@ Proxima is built using the MERN stack, featuring the following powerful tools:
 
 ## Installation
 
-To install and configuration Learnify, Follow the steps below:
+To install and configure Learnify, Follow the steps below:
 
 1. Clone the `repository` using:
 
@@ -84,16 +83,16 @@ npm i
 
 - `HOST`=for example `http://localhost:3000`
 - `DATABASE_URL`=the MongoDB connection string
-- `GOOGLE_CLIENT_ID`=a client id string for Google authentication
-- `GOOGLE_CLIENT_SECRET`=a secret string for for Google authentication
+- `GOOGLE_CLIENT_ID`=a client ID string for Google authentication
+- `GOOGLE_CLIENT_SECRET`=a secret string for Google authentication
 - `NEXTAUTH_URL`=for example `http://localhost:3000`
 - `JWT_SECRET`=a secret string for JWT authentication
 - `NEXT_PUBLIC_STRIPE_PUBLIC_KEY`=a public key string for Stripe payment integration
 - `STRIPE_SECRET_KEY`=a secret key string for Stripe payment integration
 - `STRIPE_SIGNING_SECRET`=the signing string getting after listen Stripe
 - `NEXT_PUBLIC_API_URL`=for fetching data in client example `http://localhost:3000`
-- `NEXT_PUBLIC_SERVICE_ID`=a public service id string for Email.js integration
-- `NEXT_PUBLIC_USER_ID`=a public user id string for Email.js integration
+- `NEXT_PUBLIC_SERVICE_ID`=a public service ID string for Email.js integration
+- `NEXT_PUBLIC_USER_ID`=a public user ID string for Email.js integration
 - `NEXT_PUBLIC_TEMPLATE_ID`=a public template id string for Email.js integration
 
 > ### `Note:` Make sure to set up the necessary environment variables in the `.env` file for Learnify to work properly.
@@ -108,7 +107,7 @@ To run and explore Learnify, Follow a few simple steps below:
 npm run dev
 ```
 
-2. Listen the `stripe` by running:
+2. Listen to the `stripe` by running:
 
 ```
 stripe listen --forward-to localhost:3000/api/webhook
@@ -116,7 +115,7 @@ stripe listen --forward-to localhost:3000/api/webhook
 
 > #### Note: After listening you will get a secret key for stripe payment processing. Just go to the `.env` file and store it as `STRIPE_SIGNING_SECRET`
 
-These all steps will help you set up Learnify locally and configure the required environment variables for seamless functionality. Happy learning!
+These steps will help you set up Learnify locally and configure the required environment variables for seamless functionality. Happy learning!
 
 ## Links
 
